@@ -1,10 +1,10 @@
 # napari-aSMLM
 
-[![License](https://img.shields.io/pypi/l/napari-aSMLM.svg?color=green)](https://github.com/Laboratory of Molecular Neurobiology (Prof. F. Barrantes, head), BIOMED UCA-CONICET/napari-aSMLM/raw/main/LICENSE)
+[![License](https://img.shields.io/pypi/l/napari-aSMLM.svg?color=green)](https://github.com/biomed-uca-conicet/napari-aSMLM/raw/main/LICENSE)
 [![PyPI](https://img.shields.io/pypi/v/napari-aSMLM.svg?color=green)](https://pypi.org/project/napari-aSMLM)
 [![Python Version](https://img.shields.io/pypi/pyversions/napari-aSMLM.svg?color=green)](https://python.org)
-[![tests](https://github.com/Laboratory of Molecular Neurobiology (Prof. F. Barrantes, head), BIOMED UCA-CONICET/napari-aSMLM/workflows/tests/badge.svg)](https://github.com/Laboratory of Molecular Neurobiology (Prof. F. Barrantes, head), BIOMED UCA-CONICET/napari-aSMLM/actions)
-[![codecov](https://codecov.io/gh/Laboratory of Molecular Neurobiology (Prof. F. Barrantes, head), BIOMED UCA-CONICET/napari-aSMLM/branch/main/graph/badge.svg)](https://codecov.io/gh/Laboratory of Molecular Neurobiology (Prof. F. Barrantes, head), BIOMED UCA-CONICET/napari-aSMLM)
+[![tests](https://github.com/biomed-uca-conicet/napari-aSMLM/workflows/tests/badge.svg)](https://github.com/biomed-uca-conicet/napari-aSMLM/actions)
+[![codecov](https://codecov.io/gh/biomed-uca-conicet/napari-aSMLM/branch/main/graph/badge.svg)](https://codecov.io/gh/biomed-uca-conicet/napari-aSMLM)
 [![napari hub](https://img.shields.io/endpoint?url=https://api.napari-hub.org/shields/napari-aSMLM)](https://napari-hub.org/plugins/napari-aSMLM)
 
 A plugin includes last approaches for SMLM
