@@ -38,7 +38,6 @@ def widget_wrapper():
             from napari import Viewer
             from decode.simulation import psf_kernel, structure_prior, emitter_generator, simulator, camera, background
             from munch import DefaultMunch
-            import numpy as np
             
             dictionary = {
                     "Camera": {
