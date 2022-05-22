@@ -16,7 +16,7 @@ simulation_devices = [('GPU', 'gpu'), ('CPU', 'cpu')]
 
 def widget_wrapper():
 
-    def generate_frames_and_background(simulation_device,
+    def generate_frames_and_background(device,
         number_of_emitters=10,
         lifetime_avg=1.0,
         height_size=32,
@@ -34,13 +34,11 @@ def widget_wrapper():
         emitter_extent_max_y=32,
         emitter_extent_min_z=0,
         emitter_extent_max_z=32,
-        device='cpu'
         ):
             from napari.utils.notifications import show_info
             from napari import Viewer
             from decode.simulation import psf_kernel, structure_prior, emitter_generator, simulator, camera, background
             from munch import DefaultMunch
-            from tifffile import imsave
             import numpy as np
             
             dictionary = {
@@ -65,7 +63,7 @@ def widget_wrapper():
                     },
                     "Meta": {"version": "0.10.0"},
                     "Simulation": {
-                        "bg_uniform": [0, 1],
+                        "bg_uniform": [0, 100],
                         "density": None,
                         "emitter_av": number_of_emitters,
                         "emitter_extent": [[emitter_extent_min_x, emitter_extent_max_x], [emitter_extent_min_y, emitter_extent_max_y], [emitter_extent_min_z, emitter_extent_max_z]],
@@ -166,8 +164,12 @@ def widget_wrapper():
 
     @widget.compute_diameter_button.changed.connect 
     def generate_datasets(e: Any):
-        for i in range(widget.number_of_datasets_to_generate):
-            print(i)
+        from tifffile import imsave
+        for i in range(widget.number_of_datasets_to_generate.value):
+            frames, bg, _ = generate_frames_and_background('cpu')
+            
+            imsave('dataset_generated/' + str(i) + '_frames.tif', frames)
+            imsave('dataset_generated/' + str(i) + '_backgrounds.tif', bg)            
 
     return widget            
 
