@@ -6,7 +6,6 @@ see: https://napari.org/plugins/guides.html?#widgets
 
 Replace code below according to your needs.
 """
-
 from napari_plugin_engine import napari_hook_implementation
 from napari import Viewer
 from magicgui import magicgui
